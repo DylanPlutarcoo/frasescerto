@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64FA61BB2A0EE397000063D4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FA61BA2A0EE397000063D4 /* main.swift */; };
+		64FA61C32A0EE473000063D4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FA61C22A0EE473000063D4 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,9 @@
 
 /* Begin PBXFileReference section */
 		64FA61B72A0EE397000063D4 /* frasees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = frasees; sourceTree = BUILT_PRODUCTS_DIR; };
-		64FA61BA2A0EE397000063D4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		64FA61C12A0EE473000063D4 /* frasees-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "frasees-Bridging-Header.h"; sourceTree = "<group>"; };
+		64FA61C22A0EE473000063D4 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../../../Downloads/main.swift; sourceTree = "<group>"; };
+		64FA61C42A0EE831000063D4 /* strings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = strings.json; path = ../../Documents/strings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		64FA61AE2A0EE397000063D4 = {
 			isa = PBXGroup;
 			children = (
+				64FA61C42A0EE831000063D4 /* strings.json */,
 				64FA61B92A0EE397000063D4 /* frasees */,
 				64FA61B82A0EE397000063D4 /* Products */,
 			);
@@ -57,7 +60,8 @@
 		64FA61B92A0EE397000063D4 /* frasees */ = {
 			isa = PBXGroup;
 			children = (
-				64FA61BA2A0EE397000063D4 /* main.swift */,
+				64FA61C22A0EE473000063D4 /* main.swift */,
+				64FA61C12A0EE473000063D4 /* frasees-Bridging-Header.h */,
 			);
 			path = frasees;
 			sourceTree = "<group>";
@@ -94,6 +98,7 @@
 				TargetAttributes = {
 					64FA61B62A0EE397000063D4 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -120,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64FA61BB2A0EE397000063D4 /* main.swift in Sources */,
+				64FA61C32A0EE473000063D4 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +248,16 @@
 		64FA61BF2A0EE397000063D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "frasees/frasees-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -252,8 +265,15 @@
 		64FA61C02A0EE397000063D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "frasees/frasees-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
